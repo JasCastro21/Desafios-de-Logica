@@ -21,6 +21,11 @@ function adicionar() {
 }
 
 function sortear(){
+    if (amigos.length < 4){
+        alert('Adicione pelo menos 4 amigos');
+        return;
+    }
+
     embaralha(amigos);
     let sorteio = document.getElementById('lista-sorteio');
 
@@ -33,8 +38,7 @@ function sortear(){
             sorteio.innerHTML = sorteio.innerHTML + amigos[i] + '  --> ' + amigos [i + 1] + '<br>';
 
         }
-    }
-    
+    }    
 }
 
 function embaralha(lista) {
